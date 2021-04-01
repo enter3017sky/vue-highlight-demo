@@ -1,0 +1,37 @@
+
+[
+  {
+    "title": "TC Components",
+    "list": [
+      {
+        "path": "/TCCheckboxGroup",
+        "name": "TCCheckboxGroup"
+      },
+      {
+        "path": "/TCIconGroup",
+        "name": "TCIconGroup"
+      },
+      {
+        "path": "/TCPagination",
+        "name": "TCPagination"
+      },
+      {
+        "path": "/TCSelect",
+        "name": "TCSelect"
+      },
+      {
+        "path": "/TCSwitch",
+        "name": "TCSwitch"
+      },
+      {
+        "path": "/TCTable",
+        "name": "TCTable"
+      },
+      {
+        "path": "/TCTips",
+        "name": "TCTips"
+      }
+
+    ]
+  }
+]

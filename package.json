@@ -8,13 +8,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@vue/cli-plugin-babel": "4.1.1",
     "element-ui": "2.15.1",
+    "normalize.css": "^8.0.1",
     "vue": "2.6.11",
     "vue-code-highlight": "0.7.6",
     "vue-router": "3.5.1"
   },
   "devDependencies": {
+    "@vue/cli-plugin-babel": "4.1.1",
     "@vue/cli-plugin-eslint": "4.1.1",
     "@vue/cli-service": "4.1.1",
     "babel-eslint": "10.0.3",

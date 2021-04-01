@@ -5,30 +5,63 @@ import Layout from "@/layout";
 
 Vue.use(Router);
 
-/* Layout */
-
-/* Router Modules */
-// import componentsRouter from "./modules/components";
-// import chartsRouter from "./modules/charts";
-// import tableRouter from "./modules/table";
-// import nestedRouter from "./modules/nested";
-
 export const constantRoutes = [
   {
     path: "/",
     component: Layout,
-    hidden: true
+    redirect: "home",
+    name: "Container",
+    children: [
+      {
+        path: "home",
+        component: () => import("@/views/Home"),
+        name: "Home",
+        meta: { title: "home", icon: "" },
+      },
+      {
+        path: "TCCheckboxGroup",
+        component: () => import("@/views/DemoTCCheckboxGroup"),
+        name: "TCCheckboxGroup",
+        meta: { title: "TCCheckboxGroup", icon: "" },
+      },
+      {
+        path: "TCTable",
+        component: () => import("@/views/DemoTCCheckboxGroup"),
+        name: "TCTable",
+        meta: { title: "home", icon: "" },
+      },
+      {
+        path: "TCCheckboxGroup",
+        component: () => import("@/views/DemoTCCheckboxGroup"),
+        name: "TCCheckboxGroup",
+        meta: { title: "home", icon: "" },
+      },
+      {
+        path: "TCCheckboxGroup",
+        component: () => import("@/views/DemoTCCheckboxGroup"),
+        name: "TCCheckboxGroup",
+        meta: { title: "home", icon: "" },
+      },
+
+      // {
+      //   path: '/account',
+      //   component: Account,
+      //   name: 'Account',
+      //   meta: { title: '账号资讯', icon: '', breadcrumb: 'add' },
+      // },
+    ],
+    // hidden: true
   },
 
   // 404 page must be placed at the end !!!
-  { path: "*", redirect: "/404", hidden: true }
+  { path: "*", redirect: "/home", hidden: true },
 ];
 
 const createRouter = () =>
   new Router({
     mode: "history", // require service support
     scrollBehavior: () => ({ y: 0 }),
-    routes: constantRoutes
+    routes: constantRoutes,
   });
 
 const router = createRouter();
